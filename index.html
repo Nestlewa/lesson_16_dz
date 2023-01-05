@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Forms</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <h1 class="header__title">
+                    Форма для реєстрації
+                </h1>
+                <h2 class="header__discription">
+                    Заповніть всі необхідні поля та натисніть кнопку "Відправити"
+                </h2>
+            </div>
+        </header>
+        <main class="page">
+            <div class="page__container">
+                <form class="form" action="https://jsonplaceholder.typicode.com/posts" method="post"
+                    enctype="multipart/form-data">
+                    <div class="form__line">
+                        <label for="name" class="form__label">Введіть ім'я</label>
+                        <input class="form__input" id="name" type="text" required autocomplete="off" name="name"
+                            placeholder="Тут повинно бути Ваше ім'я">
+                    </div>
+                    <div class="form__line">
+                        <label for="surname" class="form__label">Введіть прізвище</label>
+                        <input type="text" id="surname" class="form__input" required autocomplete="off" name="surname"
+                            placeholder="Тут повинно бути Ваше прізвище">
+                    </div>
+                    <div class="form__line">
+                        <label for="email" class="form__label">Введіть імейл адресу</label>
+                        <input type="text" id="email" class="form__input" required name="mail"
+                            placeholder="Тут повинна бути Ваша імейл адреса">
+                    </div>
+                    <div class="form__line">
+                        <label for="tel" class="form__label">Введіть номер телефону</label>
+                        <input type="tel" id="tel" class="form__input" required name="tel"
+                            placeholder="+38(xxx)-xxx-xx-xx">
+                    </div>
+                    <div class="form__line">
+                        <label for="pass" class="form__label">Введіть пароль(обов'язково повинен містити букви
+                            заголовного
+                            регістру, числа та спецсимволи)</label>
+                        <input type="password" id="pass" class="form__input" name="pass" required autocomplete="off"
+                            placeholder="Придумайте надійний пароль">
+                    </div>
+                    <div class="form__line">
+                        <label for="doublepass" class="form__label">Повторіть Ваш пароль</label>
+                        <input type="password" id="doublepass" class="form__input" name="doublepass" required
+                            autocomplete="off" placeholder="Ще раз введіть Ваш пароль">
+                    </div>
+                    <div class="form__line">
+                        <label for="date" class="form__label">Виберіть дату Вашого народження</label>
+                        <input type="date" id="date" class="form__input" name="date" required autocomplete="off">
+                    </div>
+                    <div class="form__line">
+                        <div class="form__radio radio">
+                            <h3 class="radio__heading">Сімейний статус</h3>
+                            <div class="radio__one">
+                                <input class="radio__input" type="radio" value="married" name="status" id="married">
+                                <label for="married" class="radio__label">
+                                    <span class="radio__text">Одружений/Заміжня</span>
+                                </label>
+                            </div>
+                            <div class="radio__two">
+                                <input class="radio__input" type="radio" value="unmarried" name="status" id="unmarried">
+                                <label for="unmarried" class="radio__label">
+                                    <span class="radio__text">Неодружений/Незаміжня</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__line">
+                        <div class="form__list list">
+                            <h3 class="list__heading">Чи є у Вас діти?</h3>
+                            <select name="list__value">
+                                <option value="1">0</option>
+                                <option value="2">1</option>
+                                <option value="3">2</option>
+                                <option value="4">3 і більше</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form__line">
+                        <div class="form__checkbox checkbox">
+                            <h3 class="checkbox__heading">Виберіть відповідні пункти</h3>
+                            <div class="checkbox__point point">
+                                <input id="message" class="point__input" name="message" type="checkbox" required>
+                                <label for="message" class="point__label">
+                                    <span>Я хочу отримувати розсилку про акції на мою пошту</span>
+                                </label>
+                            </div>
+                            <div class="checkbox__point point">
+                                <input id="agreement" class="point__input" name="agreement" type="checkbox" required>
+                                <label for="agreement" class="point__label">
+                                    <span>Я згодна з користувацькою угодою та приймаю всі правила користувача</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__line">
+                        <div class="form__portfolio portfolio">
+                            <h3 class="portfolio__heading">Фото до профілю</h3>
+                            <label for="foto" class="portfolio__label"><span>Додати фото до профілю</span></label>
+                            <input class="portfolio__input" id="foto" name="foto" type="file"
+                                accept="image/png, image/jpeg">
+                        </div>
+                    </div>
+                    <div class="form__line">
+                        <div class="form__review review">
+                            <h3 class="review__heading">Додати коментар</h3>
+                            <textarea name="comment" class="review__area"></textarea>
+                        </div>
+                    </div>
+                    <div class="form__btn-wrap">
+                        <button type="submit" class="form__button">Відправити</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__page">
+                <a href="page.html" target="_blank" class="footer__link">Форма з макету &rarr;</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
